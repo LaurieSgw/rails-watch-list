@@ -5,7 +5,8 @@
 
 <div>
 <% @lists.each do |list| %>
-   <li> <%= link_to list.name, list_path(list) %> <%= link_to "❌", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %></li>
-
+   <li> <%= link_to list.name, list_path(list) %>
+   <%= link_to "❌", list_path(list), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  %>
+   <%= cl_image_tag @article.photo.key, height: 300, width: 400, crop: :fill %></li>
 <% end %>
 </div>

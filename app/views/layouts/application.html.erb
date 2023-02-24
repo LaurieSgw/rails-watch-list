@@ -11,6 +11,11 @@
   </head>
 
   <body>
+  <% unless (params[:controller] == "lists" && params[:action] == "index") %>
+     <%= link_to "Go back to all lists", lists_path %>
+  <% end %>
+
+
     <%= yield %>
   </body>
 </html>
